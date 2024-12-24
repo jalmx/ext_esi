@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Original</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef;
+    }
+    .content {
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+    }
+  </style>
+  <script>
+    function openNewTabWithContent() {
+      // Obtener la parte específica del contenido
+      const content = document.querySelector(".content").outerHTML;
+
+      // Crear una nueva pestaña
+      const newTab = window.open();
+
+      // Agregar una estructura básica y el contenido
+      newTab.document.open();
+      newTab.document.write(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Contenido Enviado</title>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+              background-color: #eef;
+              margin: 0;
+              padding: 20px;
+            }
+          </style>
+        </head>
+        <body>
+          ${content}
+        </body>
+        </html>
+      `);
+      newTab.document.close();
+    }
+  </script>
+</head>
+<body>
+  <h1>Página Original</h1>
+  <div class="content">
+    <h2>Contenido Específico</h2>
+    <p>Este contenido será enviado a la nueva pestaña.</p>
+  </div>
+  <button onclick="openNewTabWithContent()">Abrir Pestaña con Contenido</button>
+</body>
+</html>

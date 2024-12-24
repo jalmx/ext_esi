@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acta ${title}</title>
+    <link rel="stylesheet" href="acta.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="../assets/header.png" alt="header" width="100%">
+        <div class="acta bold text_small">ACTA DE CALIFICACIONES</div>
+        <table class="table_header bold">
+            <tr>
+                <td>NIVEL: ${level}</td>
+                <td colspan="2">DESCRIPCIÓN: ${description}</td>
+            </tr>
+            <tr>
+                <td>CL/ MATERIA: ${topic}</td>
+                <td class="center_cell">PERIODO: ${period}</td>
+                <td class="center_cell">CURSO: ${course}</td>
+            </tr>
+            <tr>
+                <td>PROFESOR: ${teacher}</td>
+                <td colspan="2" class="center_cell">${partial}</td>
+            </tr>
+        </table>
+        <br>
+        <table class="table_title">
+            <tr class="gray">
+                <td class="bold" rowspan="2">No</td>
+                <td class="bold" rowspan="2">MATRICULA</td>
+                <td rowspan="2" class="bold center_cell">NOMBRE DEL ALUMNO</td>
+                <td class="bold center_cell" colspan="2">CALIFICACIÓN FINAL</td>
+                <td rowspan="2" class="bold center_cell wrap">FIRMA DEL ALUMNO</td>
+            </tr>
+            <tr class="gray">
+                <td class="center_cell bold">NUMERO</td>
+                <td class="center_cell bold">LETRA</td>
+            </tr>
+            <tr>
+                <td class="center_cell">1</td>
+                <td class="center_cell">12345678</td>
+                <td>CANUL MENDEZ LUIS ANGEL</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Nueve punto dos</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">2</td>
+                <td class="center_cell">12345678</td>
+                <td>DE LEIJA POSADA HUMBERTO</td>
+                <td class="center_cell ">10</td>
+                <td class="center_cell">Diez</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">3</td>
+                <td class="center_cell">12345678</td>
+                <td>FELIPE BOCANEGRA ALBERTO</td>
+                <td class="center_cell">4.9</td>
+                <td class="center_cell">Cuatro punto nueve</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">4</td>
+                <td class="center_cell">12345678</td>
+                <td>FORTIER HERNANDEZ JOSUE</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Nueve punto dos</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">5</td>
+                <td class="center_cell">12345678</td>
+                <td>GARCIA MENDOZA GERSON</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Seis punto nueve</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">6</td>
+                <td class="center_cell">12345678</td>
+                <td>GARCIA SUAREZ CARLOS GABRIEL</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Nueve punto dos</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">7</td>
+                <td class="center_cell">12345678</td>
+                <td>JERONIMO VAZQUEZ CESAR EMANUEL</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Nueve punto dos</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">8</td>
+                <td class="center_cell">12345678</td>
+                <td>LEYVA MENDEZ MOISES ALBERTO</td>
+                <td class="center_cell ">9.2</td>
+                <td class="center_cell">Nueve punto dos</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">9</td>
+                <td class="center_cell">12345678</td>
+                <td>SANCHEZ ALEGRIA ANGEL GABRIEL</td>
+                <td class="center_cell ">7.4</td>
+                <td class="center_cell">Siete punto cuatro</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">10</td>
+                <td class="center_cell">12345678</td>
+                <td>SANCHEZ ALEGRIA ANGEL GABRIEL</td>
+                <td class="center_cell ">7.4</td>
+                <td class="center_cell">Siete punto cuatro</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+            <tr>
+                <td class="center_cell">11</td>
+                <td class="center_cell">12345678</td>
+                <td>SANCHEZ ALEGRIA ANGEL GABRIEL</td>
+                <td class="center_cell ">7.4</td>
+                <td class="center_cell">Siete punto cuatro</td>
+                <td class="bold center_cell wrap"> </td>
+            </tr>
+
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <td class="wrap center_cell bold text_small gray">ALUMNOS EXAMINADOS</td>
+                <td class="wrap center_cell text_small">${23}</td>
+                <td class="wrap center_cell bold text_small gray">ALUMNOS APROBADOS</td>
+                <td class="wrap center_cell text_small">${15}</td>
+                <td class="wrap center_cell bold text_small gray">ALUMNOS REPROBADOS</td>
+                <td class="wrap center_cell  text_small">${15}</td>
+                <td class="wrap center_cell bold text_small gray">ALUMNOS N/P</td>
+                <td class="wrap center_cell  text_small">${0}</td>
+                <td class="wrap center_cell bold text_small gray">ALUMNOS S/D</td>
+                <td class="wrap center_cell  text_small">${0}</td>
+            </tr>
+            <tr>
+                <td class="bold center_cell gray" colspan="2">FECHA DE APLICACIÓN</td>
+                <td class="center_cell" colspan="3">${LEYVA MEDINA JOSE ALEJANDRO}</td>
+                <td class="bold center_cell gray" colspan="2">FECHA DE ENTREGA</td>
+                <td colspan="3">${date}</td>
+            </tr>
+            <tr>
+                <td class="center_cell" colspan="2">${date}</td>
+                <td class="bold center_cell gray" colspan="3">FIRMA DEL MAESTRO</td>
+                <td colspan="2"></td>
+                <td class="bold center_cell gray" colspan="3">RECIBIDO POR, NOMBRE Y FIRMA</td>
+            </tr>
+        </table>
+
+        <hr>
+        <hr>
+        <div class="footer">
+            Justo Sierra No. 1207 Col. Guadalupe Victoria COATZACOALCOS VER
+        </div>
+    </div>
+
+</body>
+
+</html>
