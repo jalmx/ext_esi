@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Generador de Actas ESI",
+    "version": "1.0",
+    "description": "Genera una página con el contenido para ser enviado a PDF",
+    "homepage_url": "github.com/jalmx/mirepo",
+    "icons": {
+      "48": "icons/icon.png",
+      "96": "icons/icon@2x.png"
+    },
+  
+    "permissions": [
+    ],
+  
+    "browser_action": {
+      "default_icon": "icons/icon.png",
+      "default_title": "Acta ESIAPI"
+    },
+    "content_scripts": [
+        {
+          "matches": ["*://*.mozilla.org/*"],
+          "js": ["borderify.js"]
+        }
+      ],
+    "background": {
+      "scripts": []
+    }
+  
+  }
+  
