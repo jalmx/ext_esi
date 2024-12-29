@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,53 +10,56 @@
       font-family: Arial, sans-serif;
       background-color: #eef;
     }
+
     .content {
       padding: 20px;
       background: #fff;
       border: 1px solid #ccc;
     }
   </style>
-  <script>
-    function openNewTabWithContent() {
-      // Obtener la parte específica del contenido
-      const content = document.querySelector(".content").outerHTML;
 
-      // Crear una nueva pestaña
-      const newTab = window.open();
-
-      // Agregar una estructura básica y el contenido
-      newTab.document.open();
-      newTab.document.write(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Contenido Enviado</title>
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              background-color: #eef;
-              margin: 0;
-              padding: 20px;
-            }
-          </style>
-        </head>
-        <body>
-          ${content}
-        </body>
-        </html>
-      `);
-      newTab.document.close();
-    }
-  </script>
 </head>
+
 <body>
   <h1>Página Original</h1>
   <div class="content">
     <h2>Contenido Específico</h2>
     <p>Este contenido será enviado a la nueva pestaña.</p>
   </div>
-  <button onclick="openNewTabWithContent()">Abrir Pestaña con Contenido</button>
+  <button id="btn">Abrir Pestaña con Contenido</button>
+  <script async src="./content.js"></script>
+  <script>
+    function openNewTabWithContent() {
+
+      // Crear una nueva pestaña
+      const newTab = window.open();
+
+      // Agregar una estructura básica y el contenido
+      info = {
+        "title": "Acta",
+        "level": "LICENCIATURA EN INGENIERIA MECATRONICA",
+        "description": "ING_MEC",
+        "topic": "IMM-025- PROGRAMACION",
+        "period": "2025-1",
+        "course": "2 SSM 202 SEP",
+        "teacher": "LEYVA MEDINA JOSE ALEJANDRO",
+        "partial": "2DO. PARCIAL",
+        "studentsExa": "10",
+        "studentsApr": "8",
+        "studentsRepr": "2",
+        "studentsNP": "0",
+        "studentsSD": "0",
+        "date": "30/11/2024"
+      }
+      newTab.document.open();
+      newTab.document.write(content(info));
+      newTab.document.close();
+    }
+
+    document.getElementById("btn").addEventListener("click", () => {
+      openNewTabWithContent()
+    })
+  </script>
 </body>
+
 </html>

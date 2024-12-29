@@ -1,30 +1,62 @@
 {
-    "manifest_version": 2,
-    "name": "Generador de Actas ESI",
-    "version": "1.0",
-    "description": "Genera una página con el contenido para ser enviado a PDF",
-    "homepage_url": "github.com/jalmx/mirepo",
-    "icons": {
-      "48": "icons/icon.png",
-      "96": "icons/icon@2x.png"
-    },
-  
-    "permissions": [
-    ],
-  
-    "browser_action": {
-      "default_icon": "icons/icon.png",
-      "default_title": "Acta ESIAPI"
-    },
-    "content_scripts": [
-        {
-          "matches": ["*://*.mozilla.org/*"],
-          "js": ["borderify.js"]
-        }
+  "manifest_version": 3,
+  "name": "Abrir información de la página",
+  "version": "1.0",
+  "description": "Agrega un botón en cada página para abrir una pestaña con información de la página actual.",
+  "permissions": [
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "scripts": [
+      "extension/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://esiapi.edu.mx/*"
       ],
-    "background": {
-      "scripts": []
+      "js": [
+        "extension/content.js"
+      ]
     }
-  
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "extension/viewer.html"
+      ],
+      "matches": [
+        "https://esiapi.edu.mx/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon.png",
+      "32":  "icons/icon.png"
+    },
+    "default_title": "ESI extension?",
+    "default_popup": "extension/popup.html",
+    "theme_icons": [
+      {
+        "light":  "icons/icon.png",
+        "dark":  "icons/icon.png",
+        "size": 16
+      },
+      {
+        "light":  "icons/icon.png",
+        "dark":  "icons/icon.png",
+        "size": 32
+      }
+    ]
+  },
+  "icons": {
+    "48": "icons/icon.png",
+    "96": "icons/icon@2x.png"
   }
-  
+}
