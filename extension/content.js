@@ -101,7 +101,7 @@ function buildTableStudent(students) {
     tableStudents += rowTable(index, student)
   }
 
-  for (let index = 0; index < 13 - students.length; index++) {
+  for (let index = 0; index < 12 - students.length; index++) {
     tableStudents += rowEmptyTable()
   }
 
